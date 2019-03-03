@@ -1,5 +1,234 @@
-$primary-color: #blue;
+@import 'config';
+@import 'menu';
+@import 'buttons';
+@import 'progressBar';
+
+
+* {
+    box-sizing: border-box;
+}
 
 body {
+    @include background();
     background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
 }
+
+//Headings
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 4.3rem;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2), 0.5);
+    }
+}
+
+// cursor
+.txt-type>.txt {
+    border-right: 0.2rem solid #777;
+    border-top-width: 2rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+main {
+    padding: 4rem;
+    // height: 100%;
+    min-height: calc(100vh - 60px);
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            i {
+                &.fa-facebook:hover {
+                    color: #1565c0;
+                    @include easeOut();
+                }
+
+                &.fa-twitter:hover {
+                    color: #64b5f6;
+                    @include easeOut();
+                }
+
+                &.fa-linkedin:hover {
+                    color: #2979ff;
+                    @include easeOut();
+                }
+            }
+        }
+    }
+
+    &#home {
+        overflow: hidden;
+
+        h1 {
+            margin-top: 20.5vh;
+        }
+    }
+}
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bioImage bio bio''job1 job2 job3''skills skills skills';
+    grid-template-columns: repeat(3, 1fr);
+
+
+    .bio-image {
+        grid-area: bioImage;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .job-1 {
+        grid-area: job1;
+    }
+
+    .job-2 {
+        grid-area: job2;
+    }
+
+    .job-3 {
+        grid-area: job3;
+    }
+
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+    }
+
+    .skills {
+        grid-area: skills;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        h2 {
+            grid-column: 1 / span 3;
+        }
+
+    }
+
+    h3,
+    h5,
+    h6 {
+        text-align: center;
+    }
+
+    .job-title {
+        border-bottom: set-text-color($secondary-color) 3px solid;
+        border-inline-start-width: 1rem;
+    }
+
+    .duration {
+        color: $secondary-color;
+    }
+}
+
+//Work/Projects
+.projects {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    img {
+        width: 100%;
+        border: 3px #fff solid;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+//Contacts Page
+main#contact {
+    .portrait {
+        display: inline-flex;
+        width: 150px;
+        height: 150px;
+        background: url(../img/portrait2.jpg);
+        background-size: cover;
+        border-radius: 50%;
+        border: solid 6px $secondary-color;
+    }
+
+    h2 {
+        display: inline-block;
+        margin-bottom: 3rem;
+    }
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div {
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover {
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+
+            span {
+                color: set-text-color($secondary-color);
+            }
+        }
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    height: 60px;
+}
+
+// media queries for responsiveness
+@import 'mobile';

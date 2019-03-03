@@ -1,0 +1,126 @@
+//Widescreens
+@include mediaXL {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+//Desktop & laptops
+@include mediaLg {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+//Tablets and small laptops
+@include mediaMd {
+    body {
+        overflow: hidden;
+    }
+
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    ul.menu-nav,
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .menu-nav {
+        height: 70vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 24px;
+    }
+
+    .menu-branding {
+        height: 30vh;
+        transform: translate3d(100%, 0, 0);
+
+        .portrait {
+            background: url('../img/portrait2.jpg');
+            width: 170px;
+            height: 150px;
+            background-size: cover;
+        }
+    }
+
+    .about-info {
+        grid-template-areas: 'bioImage''bio''job1''job2''job3''skills';
+
+        grid-template-columns: 1fr;
+
+        .skills {
+            display: block;
+            margin-left: -1rem;
+            width: 400px;
+            margin-bottom: -3rem;
+
+            .progress-bar {
+                margin-left: -1rem;
+            }
+        }
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+//Smartphones
+@include mediaSm {
+    .menu-nav {
+        font-size: 15px;
+    }
+
+    main {
+        margin-top: -10px;
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+    }
+
+    main#home {
+
+        //Headings
+        h1,
+        h2,
+        h3 {
+            font-weight: 200;
+
+            &.lg-heading {
+                font-size: 2.3rem;
+            }
+
+            &.sm-heading {
+                margin-bottom: 1.5rem;
+                padding: 0.2rem 1rem;
+                background: rgba(lighten($primary-color, 2), 0.5);
+            }
+        }
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+}

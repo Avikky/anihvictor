@@ -1,35 +1,28 @@
-//Select Menu Items
+//Init on DOM load
+document.addEventListener('DOMContentLoaded', init);
 
-var menuBtn = document.querySelector('.menu-btn');
-var menu = document.querySelector('.menu');
-var menuNav = document.querySelector('.menu-nav');
-var menuBranding = document.querySelector('.menu-branding');
-var navItems = document.querySelectorAll('.nav-item');
-
-//Set interval State Of Menu
-let showMenu = false;
-
-menuBtn.addEventListener('click', toggleMenu);
-
-function toggleMenu(){
-    if(!showMenu){
-        menuBtn.classList.add('close');
-        menu.classList.add('show');
-        menuNav.classList.add('show');
-        menuBranding.classList.add('show');
-        navItems.forEach(item => item.classList.add('show'));
-
-        //set Menu State 
-        showMenu = true;
-
-    }else{
-        menuBtn.classList.remove('close');
-        menu.classList.remove('show');
-        menuNav.classList.remove('show');
-        menuBranding.classList.remove('show');
-        navItems.forEach(item => item.classList.remove('show'));
-
-        //set Menu State 
-        showMenu = false;
-    }
+//Init app
+function init() {
+	const txtElement = document.querySelector('.txt-type');
+	const words = JSON.parse(txtElement.getAttribute('data-words'));
+	const wait = txtElement.getAttribute('data-wait');
+	//Init typewriter
+	new TypeWriter(txtElement, words, wait);
 }
+
+
+const html = new ProgressBar(document.querySelector('.html'), 80);
+
+const css = new ProgressBar(document.querySelector('.css'), 65);
+
+const javaScript = new ProgressBar(document.querySelector('.javascript'), 30);
+
+const jquery = new ProgressBar(document.querySelector('.jquery'), 45);
+
+const sql = new ProgressBar(document.querySelector('.sql'), 57);
+
+const php = new ProgressBar(document.querySelector('.php'), 70);
+
+const BootStrap = new ProgressBar(document.querySelector('.bootstrap'), 80);
+
+const MaterialiseCss = new ProgressBar(document.querySelector('.materialised-css'), 78);
