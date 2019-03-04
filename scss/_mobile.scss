@@ -76,22 +76,22 @@
     }
 }
 
-//Smartphones
+//Smartphones 
 @include mediaSm {
     .menu-nav {
         font-size: 15px;
     }
 
     main {
-        margin-top: -10px;
         align-items: center;
         text-align: center;
 
         .lg-heading {
-            line-height: 1.2;
+            line-height: 1;
             margin-bottom: 1rem;
         }
     }
+
 
     main#home {
 
@@ -102,22 +102,77 @@
             font-weight: 200;
 
             &.lg-heading {
-                font-size: 2.3rem;
+                font-size: 2.5rem;
             }
 
             &.sm-heading {
-                margin-bottom: 1.5rem;
+                margin-bottom: 2rem;
                 padding: 0.2rem 1rem;
                 background: rgba(lighten($primary-color, 2), 0.5);
             }
         }
     }
 
-    .projects {
-        grid-template-columns: 1fr;
+    main#about {
+
+        //Headings
+        h1,
+        h2,
+        h3 {
+            font-weight: 200;
+
+            &.lg-heading {
+                font-size: 2.5rem;
+            }
+
+            &.sm-heading {
+                margin-bottom: 2rem;
+                padding: 0.2rem 1rem;
+                background: rgba(lighten($primary-color, 2), 0.5);
+            }
+        }
+
+        .bio-image {
+            width: 260px;
+            height: 227px;
+        }
+
+        .bio {
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .about-info {
+            grid-template-areas:
+                'bioImage'
+                'bio'
+                'job1'
+                'job2'
+                'job3'
+                'skills';
+
+            grid-template-columns: 1fr;
+
+            .skills {
+                display: block;
+                margin-left: -1rem;
+                width: 300px;
+                margin-bottom: -3rem;
+
+                .progress-bar {
+                    margin-left: -1rem;
+                    width: 15rem;
+                }
+            }
+
+        }
     }
 
-    .skills {
-        grid-template-columns: 1fr;
+    main#contact {
+        .boxes>div {
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+        }
     }
 }
