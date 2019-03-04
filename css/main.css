@@ -365,11 +365,10 @@ main#contact h2 {
   .menu-nav {
     font-size: 15px; }
   main {
-    margin-top: -10px;
     align-items: center;
     text-align: center; }
     main .lg-heading {
-      line-height: 1.2;
+      line-height: 1;
       margin-bottom: 1rem; }
   main#home h1,
   main#home h2,
@@ -378,14 +377,43 @@ main#contact h2 {
     main#home h1.lg-heading,
     main#home h2.lg-heading,
     main#home h3.lg-heading {
-      font-size: 2.3rem; }
+      font-size: 2.5rem; }
     main#home h1.sm-heading,
     main#home h2.sm-heading,
     main#home h3.sm-heading {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       padding: 0.2rem 1rem;
       background: rgba(79, 21, 149, 0.5); }
-  .projects {
+  main#about h1,
+  main#about h2,
+  main#about h3 {
+    font-weight: 200; }
+    main#about h1.lg-heading,
+    main#about h2.lg-heading,
+    main#about h3.lg-heading {
+      font-size: 2.5rem; }
+    main#about h1.sm-heading,
+    main#about h2.sm-heading,
+    main#about h3.sm-heading {
+      margin-bottom: 2rem;
+      padding: 0.2rem 1rem;
+      background: rgba(79, 21, 149, 0.5); }
+  main#about .bio-image {
+    width: 260px;
+    height: 227px; }
+  main#about .bio p {
+    font-size: 1rem; }
+  main#about .about-info {
+    grid-template-areas: 'bioImage' 'bio' 'job1' 'job2' 'job3' 'skills';
     grid-template-columns: 1fr; }
-  .skills {
-    grid-template-columns: 1fr; } }
+    main#about .about-info .skills {
+      display: block;
+      margin-left: -1rem;
+      width: 300px;
+      margin-bottom: -3rem; }
+      main#about .about-info .skills .progress-bar {
+        margin-left: -1rem;
+        width: 15rem; }
+  main#contact .boxes > div {
+    font-size: 1.5rem;
+    padding: 1rem 2rem; } }
