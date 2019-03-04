@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Responsive portfolio website for Anih Victor",
   "main": "index.js",
+  "homepage": "https://avikky.github.io/anihvictor",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Anih Victor",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
   }
 }
