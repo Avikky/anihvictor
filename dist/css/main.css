@@ -322,8 +322,6 @@ main#contact h2 {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
-  body main {
-    overflow: hidden; }
   main {
     align-items: center;
     text-align: center; }

@@ -14,9 +14,6 @@
 
 //Tablets and small laptops
 @include mediaMd {
-    body main {
-        overflow: hidden;
-    }
 
     main {
         align-items: center;
