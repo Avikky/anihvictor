@@ -54,7 +54,13 @@ main {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
+            align-items: center;
             margin-top: 1.75rem;
+
+            .btn-senior,
+            .btn-outline {
+                margin-top: 0;
+            }
         }
 
         // ── Portrait Card ─────────────────────────────────────
