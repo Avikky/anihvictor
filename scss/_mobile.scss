@@ -23,6 +23,23 @@
             line-height: 1;
             margin-bottom: 2.5rem;
         }
+
+        &#home {
+            .hero-content {
+                grid-template-columns: 1fr;
+                padding-top: 7rem;
+                gap: 2rem;
+            }
+
+            .hero-card {
+                max-width: 380px;
+                margin: 0 auto;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+        }
     }
 
     ul.menu-nav,
@@ -298,5 +315,30 @@
     .skill-groups {
         grid-template-columns: 1fr;
         gap: 1.25rem;
+    }
+}
+
+// Small phones
+@include mediaSm {
+    main#home {
+        padding: 2rem;
+
+        .hero-content {
+            padding-top: 5.5rem;
+        }
+
+        .hero-card__img img {
+            height: 220px;
+        }
+
+        .hero-cta {
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                width: 100%;
+                text-align: center;
+            }
+        }
     }
 }
