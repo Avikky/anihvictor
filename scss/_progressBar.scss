@@ -23,8 +23,7 @@
 .progress-bar-fill {
 	height: 100%;
 	border-radius: 2rem;
-	background-color: #fce043;
-	background: radial-gradient(#fce043, #4a148c);
+	background: $secondary-color;
 	@include easeOut;
 	width: 20%;
 }

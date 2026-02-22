@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://avikky.github.io/anihvictor/sitemap.xml
+
+# Disallow build artefacts (none applicable for this static site)

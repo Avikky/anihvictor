@@ -5,7 +5,8 @@
   "main": "index.js",
   "homepage": "https://avikky.github.io/anihvictor",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "sass": "sass --watch scss/main.scss dist/css/main.css",
+    "sass:build": "sass scss/main.scss dist/css/main.css",
     "deploy": "gh-pages -d dist"
   },
   "author": "Anih Victor",
@@ -13,5 +14,8 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
+  },
+  "devDependencies": {
+    "sass": "^1.97.3"
   }
 }
